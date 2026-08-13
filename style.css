@@ -91,39 +91,84 @@ a { color: inherit; }
 }
 .nav__mark .dot { color: var(--gold); }
 
-.nav__links {
+.langbar {
   display: flex;
-  gap: 22px;
-  list-style: none;
-  margin: 0; padding: 0;
+  gap: 2px;
+  border: 1px solid var(--line-strong);
+  padding: 2px;
+}
+.lang-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.lang-btn:hover, .lang-btn:focus-visible { color: var(--text); }
+.lang-btn.active {
+  background: var(--gold);
+  color: #14110a;
+  font-weight: 700;
+}
+
+/* ---------------- view routing ---------------- */
+
+.view {
+  animation: viewIn 0.4s ease both;
+}
+@keyframes viewIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .view { animation: none; }
+}
+
+.subpage {
+  padding: 130px 0 60px;
+  min-height: 100svh;
+}
+
+.back-link {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 36px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.back-link:hover, .back-link:focus-visible { color: var(--gold); border-color: var(--gold); }
+
+.section-subhead {
   font-family: var(--mono);
   font-size: 12px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: var(--muted-2);
+  margin: 46px 0 18px;
 }
-.nav__links a {
-  text-decoration: none;
-  color: var(--muted);
-  position: relative;
-  padding-bottom: 4px;
-  transition: color 0.2s ease;
-}
-.nav__links a:hover, .nav__links a:focus-visible { color: var(--text); }
-.nav__links a::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: 0;
-  width: 0%;
-  height: 1px;
-  background: var(--gold);
-  transition: width 0.25s ease;
-}
-.nav__links a:hover::after, .nav__links a:focus-visible::after { width: 100%; }
 
-@media (max-width: 560px) {
-  .nav__links { gap: 14px; }
-  .nav__links span.sep { display: none; }
+.chapter__title--gold { color: var(--text); }
+.chapter__title--gold::after,
+.chapter__title--blue::after { content: ""; }
+.chapter__title--gold { border-left: 3px solid var(--gold); padding-left: 14px; }
+.chapter__title--blue { border-left: 3px solid var(--blue); padding-left: 14px; }
+
+.link-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
+
+.contact-box--tight { padding: 22px 26px; margin-top: 4px; }
 
 /* ---------------- hero ---------------- */
 
@@ -204,6 +249,53 @@ a { color: inherit; }
 }
 .hero__meta span { display: flex; align-items: center; gap: 8px; }
 .hero__meta .k { color: var(--muted); }
+
+.card-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 640px;
+}
+@media (max-width: 560px) {
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+.card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 22px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.card-link:hover, .card-link:focus-visible {
+  transform: translateY(-3px);
+  background: var(--panel-2);
+}
+.card-link[data-accent="gold"]:hover, .card-link[data-accent="gold"]:focus-visible { border-color: var(--gold); }
+.card-link[data-accent="blue"]:hover, .card-link[data-accent="blue"]:focus-visible { border-color: var(--blue); }
+
+.card-link__icon {
+  width: 26px; height: 26px;
+  color: var(--muted-2);
+}
+.card-link[data-accent="gold"] .card-link__icon { color: var(--gold); }
+.card-link[data-accent="blue"] .card-link__icon { color: var(--blue); }
+.card-link__icon svg { width: 100%; height: 100%; }
+
+.card-link__title {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.card-link__desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
 
 .scrollcue {
   position: absolute;

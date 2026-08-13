@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jev Popovs — Enterprise Architect &amp; Squash Coach</title>
-<meta name="description" content="Jevgenijs 'Jev' Popovs — Enterprise Architect & Microsoft Dynamics 365 F&O Architect based in Germany, and licensed squash coach (License C) at SC Yellow Dot Maintal.">
+<title>Jev Popovs</title>
+<meta name="description" content="Jevgenijs 'Jev' Popovs — Enterprise Architect, licensed squash coach. Professional, private, sports and contact links in one place.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230a0d13%22/><text x=%2250%22 y=%2262%22 font-family=%22monospace%22 font-size=%2244%22 font-weight=%22700%22 fill=%22%23f2b705%22 text-anchor=%22middle%22>J</text></svg>">
 
@@ -17,110 +17,181 @@
 <body>
 
 <nav class="nav">
-  <a href="#top" class="nav__mark">JEV<span class="dot">.</span>LV</a>
-  <ul class="nav__links">
-    <li><a href="#career">Career</a></li>
-    <li><a href="#squash">Squash</a></li>
-    <li><a href="#connect">Connect</a></li>
-  </ul>
+  <a href="#/" class="nav__mark">JEV<span class="dot">.</span>LV</a>
+  <div class="langbar" role="group" aria-label="Language">
+    <button type="button" class="lang-btn" data-lang="en">EN</button>
+    <button type="button" class="lang-btn" data-lang="ru">RU</button>
+    <button type="button" class="lang-btn" data-lang="lv">LV</button>
+    <button type="button" class="lang-btn" data-lang="de">DE</button>
+  </div>
 </nav>
 
-<header class="hero" id="top">
-  <svg class="hero__grid" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <!-- squash court outline, drawn once -->
-    <g fill="none" stroke="#2c3d57" stroke-width="1.5">
-      <rect x="700" y="120" width="420" height="560" />
-      <line x1="700" y1="404" x2="1120" y2="404" />
-      <line x1="910" y1="404" x2="910" y2="680" />
-      <rect x="700" y="558" width="105" height="122" />
-      <rect x="805" y="558" width="105" height="122" />
-      <line x1="700" y1="215" x2="1120" y2="215" stroke-dasharray="4 6" />
-    </g>
-    <g id="traceline" fill="none" stroke="#f2b705" stroke-width="2" stroke-linecap="round">
-      <path d="M 720 660 L 1000 500 L 780 300 L 1080 170" />
-    </g>
-    <circle cx="720" cy="660" r="4" fill="#f2b705" />
-  </svg>
+<main id="app">
 
-  <div class="wrap hero__inner">
-    <p class="hero__eyebrow">Maintal, Germany &middot; from Riga, Latvia</p>
-    <h1 class="hero__name">Jevgenijs<br>Popovs <span class="callsign">/ JEV</span></h1>
-    <p class="hero__tagline">
-      <b>Enterprise Architect</b> and <span class="blue">Microsoft Dynamics 365 F&amp;O Architect</span>,
-      building enterprise systems since 1997. Off the clock, licensed
-      <span class="gold">squash coach</span> (License&nbsp;C, Germany), coaching juniors between two countries.
-    </p>
-    <div class="hero__meta">
-      <span><span class="k">Based:</span> Germany, since 2012</span>
-      <span><span class="k">Origin:</span> Latvia</span>
-      <span><span class="k">IT since:</span> 1997</span>
-      <span><span class="k">Coaching since:</span> 2015</span>
-    </div>
-  </div>
+  <!-- ============ HOME / VISITCARD ============ -->
+  <section class="view" id="view-home" data-view="home">
+    <div class="hero">
+      <svg class="hero__grid" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="#2c3d57" stroke-width="1.5">
+          <rect x="700" y="120" width="420" height="560" />
+          <line x1="700" y1="404" x2="1120" y2="404" />
+          <line x1="910" y1="404" x2="910" y2="680" />
+          <rect x="700" y="558" width="105" height="122" />
+          <rect x="805" y="558" width="105" height="122" />
+          <line x1="700" y1="215" x2="1120" y2="215" stroke-dasharray="4 6" />
+        </g>
+        <g id="traceline" fill="none" stroke="#f2b705" stroke-width="2" stroke-linecap="round">
+          <path d="M 720 660 L 1000 500 L 780 300 L 1080 170" />
+        </g>
+        <circle cx="720" cy="660" r="4" fill="#f2b705" />
+      </svg>
 
-  <div class="scrollcue"><span class="line"></span> Scroll</div>
-</header>
+      <div class="wrap hero__inner">
+        <p class="hero__eyebrow" data-i18n="home_eyebrow"></p>
+        <h1 class="hero__name">Jevgenijs Popovs <span class="callsign">/ JEV</span></h1>
+        <p class="hero__tagline" data-i18n="home_tagline"></p>
 
-<main>
-
-  <section class="chapter chapter--tech" id="career">
-    <div class="wrap">
-      <div class="chapter__head">
-        <span class="chapter__num">01</span>
-        <h2 class="chapter__title">The <span class="accent">Architecture</span> Chapter</h2>
+        <div class="card-grid">
+          <a class="card-link" href="#/professional" data-accent="gold">
+            <span class="card-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
+            </span>
+            <span class="card-link__title" data-i18n="card_professional_title"></span>
+            <span class="card-link__desc" data-i18n="card_professional_desc"></span>
+          </a>
+          <a class="card-link" href="#/private" data-accent="blue">
+            <span class="card-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+            </span>
+            <span class="card-link__title" data-i18n="card_private_title"></span>
+            <span class="card-link__desc" data-i18n="card_private_desc"></span>
+          </a>
+          <a class="card-link" href="#/sports" data-accent="gold">
+            <span class="card-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M6 6l12 12M18 6 6 18"/></svg>
+            </span>
+            <span class="card-link__title" data-i18n="card_sports_title"></span>
+            <span class="card-link__desc" data-i18n="card_sports_desc"></span>
+          </a>
+          <a class="card-link" href="#/contacts" data-accent="blue">
+            <span class="card-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 6 8 6 8-6"/></svg>
+            </span>
+            <span class="card-link__title" data-i18n="card_contacts_title"></span>
+            <span class="card-link__desc" data-i18n="card_contacts_desc"></span>
+          </a>
+        </div>
       </div>
-      <p class="chapter__intro">
-        Nearly three decades in IT, most recently focused on enterprise architecture
-        and Microsoft Dynamics 365 Finance &amp; Operations.
-      </p>
+    </div>
+  </section>
+
+  <!-- ============ PROFESSIONAL ============ -->
+  <section class="view" id="view-professional" data-view="professional" hidden>
+    <div class="wrap subpage">
+      <a href="#/" class="back-link" data-i18n="back"></a>
+      <div class="chapter__head">
+        <h2 class="chapter__title chapter__title--gold" data-i18n="professional_title"></h2>
+      </div>
+      <p class="chapter__intro" data-i18n="professional_intro"></p>
 
       <ol class="timeline">
         <li>
           <span class="t-year">1997</span>
-          <h3 class="t-role">IT career begins</h3>
-          <p class="t-desc">Started out in IT in Latvia, laying the technical foundation for everything that followed.</p>
+          <h3 class="t-role" data-i18n="t_1997_role"></h3>
+          <p class="t-desc" data-i18n="t_1997_desc"></p>
         </li>
         <li>
           <span class="t-year">2012</span>
-          <h3 class="t-role">Relocation to Germany</h3>
-          <p class="t-desc">Moved from Latvia to Germany, continuing an enterprise IT career from a new base in Maintal.</p>
+          <h3 class="t-role" data-i18n="t_2012_role"></h3>
+          <p class="t-desc" data-i18n="t_2012_desc"></p>
         </li>
         <li class="now">
-          <span class="t-year">Present</span>
-          <h3 class="t-role">Enterprise Architect &amp; D365 F&amp;O Architect</h3>
-          <p class="t-desc">Designing enterprise-level solutions and leading Microsoft Dynamics 365 Finance &amp; Operations architecture.</p>
+          <span class="t-year">—</span>
+          <h3 class="t-role" data-i18n="t_now_role"></h3>
+          <p class="t-desc" data-i18n="t_now_desc"></p>
         </li>
       </ol>
+
+      <h3 class="section-subhead" data-i18n="professional_links_heading"></h3>
+      <div class="social-grid">
+        <a class="social-card" href="https://www.linkedin.com/in/jvpopov/" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          <span class="body"><b>LinkedIn</b><span>jvpopov</span></span>
+        </a>
+        <a class="social-card" href="https://www.xing.com/profile/Jevgenijs_Popovs" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.19 3.02H14.5a.42.42 0 0 0-.4.27l-5.44 9.6 3.9 7.09a.44.44 0 0 0 .4.24h3.68a.32.32 0 0 0 .29-.48l-3.86-6.95v-.02l6.02-9.28a.31.31 0 0 0-.3-.47zM8.36 8.65H4.68a.32.32 0 0 0-.29.49l2.06 3.56v.02L3.03 18.9a.31.31 0 0 0 .29.47h3.69c.16 0 .31-.1.39-.25l3.42-6.24-2.17-3.94a.44.44 0 0 0-.29-.29z"/></svg>
+          <span class="body"><b>Xing</b><span>Jevgenijs_Popovs</span></span>
+        </a>
+      </div>
+
+      <div class="contact-box">
+        <div class="email-buttons">
+          <button class="email-btn" type="button" data-user="jevgenijs.popovs" data-domain="gmail.com" data-label="Professional email">Email</button>
+        </div>
+        <p class="note" data-i18n="email_note"></p>
+      </div>
     </div>
   </section>
 
-  <section class="chapter" id="squash">
-    <div class="wrap">
+  <!-- ============ PRIVATE ============ -->
+  <section class="view" id="view-private" data-view="private" hidden>
+    <div class="wrap subpage">
+      <a href="#/" class="back-link" data-i18n="back"></a>
       <div class="chapter__head">
-        <span class="chapter__num">02</span>
-        <h2 class="chapter__title">The <span class="accent">Squash</span> Chapter</h2>
+        <h2 class="chapter__title chapter__title--blue" data-i18n="private_title"></h2>
       </div>
-      <p class="chapter__intro">
-        From the basketball court to the squash court — and now to the coaching side of the glass.
-      </p>
+      <p class="chapter__intro" data-i18n="private_intro"></p>
+
+      <h3 class="section-subhead" data-i18n="private_links_heading"></h3>
+      <div class="social-grid">
+        <a class="social-card" href="https://www.facebook.com/jvpopov/" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.9h2.65l.4-3.08h-3.05V8.05c0-.89.25-1.5 1.52-1.5h1.63V3.8A21.8 21.8 0 0 0 14.3 3.7c-2.36 0-3.98 1.44-3.98 4.08v2.24H7.66v3.08h2.66V21h3.18z"/></svg>
+          <span class="body"><b>Facebook</b><span>jvpopov</span></span>
+        </a>
+        <a class="social-card" href="https://www.instagram.com/jvpopov" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43A4.9 4.9 0 0 1 3.78 3c.5-.5 1.02-.9 1.77-1.15.46-.16 1.26-.35 2.43-.4C9.25 2.17 9.63 2.16 12 2.16zm0 1.8c-3.14 0-3.5.01-4.73.07-.96.04-1.48.2-1.83.34-.46.18-.78.4-1.13.74-.34.34-.56.67-.74 1.13-.14.35-.3.87-.34 1.83-.06 1.23-.07 1.6-.07 4.73s.01 3.5.07 4.73c.04.96.2 1.48.34 1.83.18.46.4.78.74 1.13.34.34.67.56 1.13.74.35.14.87.3 1.83.34 1.23.06 1.6.07 4.73.07s3.5-.01 4.73-.07c.96-.04 1.48-.2 1.83-.34.46-.18.78-.4 1.13-.74.34-.34.56-.67.74-1.13.14-.35.3-.87.34-1.83.06-1.23.07-1.6.07-4.73s-.01-3.5-.07-4.73c-.04-.96-.2-1.48-.34-1.83a2.9 2.9 0 0 0-.74-1.13 2.9 2.9 0 0 0-1.13-.74c-.35-.14-.87-.3-1.83-.34-1.23-.06-1.6-.07-4.73-.07zm0 4.6a5.44 5.44 0 1 1 0 10.88 5.44 5.44 0 0 1 0-10.88zm0 1.8a3.64 3.64 0 1 0 0 7.28 3.64 3.64 0 0 0 0-7.28zm5.66-1.99a1.27 1.27 0 1 1-2.54 0 1.27 1.27 0 0 1 2.54 0z"/></svg>
+          <span class="body"><b>Instagram</b><span>@jvpopov</span></span>
+        </a>
+      </div>
+      <p class="note" data-i18n="private_more"></p>
+    </div>
+  </section>
+
+  <!-- ============ SPORTS ============ -->
+  <section class="view" id="view-sports" data-view="sports" hidden>
+    <div class="wrap subpage">
+      <a href="#/" class="back-link" data-i18n="back"></a>
+      <div class="chapter__head">
+        <h2 class="chapter__title chapter__title--gold" data-i18n="sports_title"></h2>
+      </div>
+      <p class="chapter__intro" data-i18n="sports_intro"></p>
 
       <div class="court">
         <div class="court__text">
-          <p>Played basketball for years before switching to <b>squash in 2015</b>. What started
-          as a change of game turned into a second career: today Jev is a
-          <b>licensed squash trainer (License&nbsp;C, Germany)</b>, coaching junior players.</p>
-          <p>Home base is <b>SC Yellow Dot Maintal e.V.</b>, where Jev trains the club's juniors —
-          and the coaching continues in <b>Latvia</b> whenever Jev is back visiting.</p>
+          <p data-i18n="sports_text1"></p>
+          <p data-i18n="sports_text2"></p>
 
           <div class="stat-row">
-            <div class="stat"><span class="n">2015</span><span class="l">Playing squash since</span></div>
-            <div class="stat"><span class="n">Lic. C</span><span class="l">German coaching license</span></div>
-            <div class="stat"><span class="n">2</span><span class="l">Countries coached in</span></div>
+            <div class="stat"><span class="n" data-i18n="stat1_n"></span><span class="l" data-i18n="stat1_l"></span></div>
+            <div class="stat"><span class="n" data-i18n="stat2_n"></span><span class="l" data-i18n="stat2_l"></span></div>
+            <div class="stat"><span class="n" data-i18n="stat3_n"></span><span class="l" data-i18n="stat3_l"></span></div>
           </div>
 
-          <a class="club-link" href="https://sc-yellowdot.de/" target="_blank" rel="noopener">
-            SC Yellow Dot Maintal e.V. <span class="arrow">→</span>
-          </a>
+          <div class="link-row">
+            <a class="club-link" href="https://sc-yellowdot.de/" target="_blank" rel="noopener">
+              <span data-i18n="club_link"></span> <span class="arrow">→</span>
+            </a>
+            <a class="club-link" href="https://www.squashacc.com" target="_blank" rel="noopener">
+              <span data-i18n="sports_site_link"></span> <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <div class="contact-box contact-box--tight">
+            <div class="email-buttons">
+              <button class="email-btn" type="button" data-user="jev" data-domain="squashacc.com" data-label="Sports email">Email</button>
+            </div>
+            <p class="note" data-i18n="email_note"></p>
+          </div>
         </div>
 
         <svg class="court__svg" viewBox="0 0 300 420" role="img" aria-label="Squash court diagram">
@@ -136,48 +207,52 @@
     </div>
   </section>
 
-  <section class="chapter" id="connect">
-    <div class="wrap">
+  <!-- ============ CONTACTS ============ -->
+  <section class="view" id="view-contacts" data-view="contacts" hidden>
+    <div class="wrap subpage">
+      <a href="#/" class="back-link" data-i18n="back"></a>
       <div class="chapter__head">
-        <span class="chapter__num">03</span>
-        <h2 class="chapter__title">The <span class="accent">Connect</span> Chapter</h2>
+        <h2 class="chapter__title chapter__title--blue" data-i18n="contacts_title"></h2>
       </div>
-      <p class="chapter__intro">Where to find Jev online — and a way to write in that keeps the bots out.</p>
+      <p class="chapter__intro" data-i18n="contacts_intro"></p>
 
-      <div class="social-grid">
-        <a class="social-card" href="https://www.linkedin.com/in/jvpopov/" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          <span class="body"><b>LinkedIn</b><span>Professional profile</span></span>
-        </a>
-        <a class="social-card" href="https://www.instagram.com/jvpopov" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43A4.9 4.9 0 0 1 3.78 3c.5-.5 1.02-.9 1.77-1.15.46-.16 1.26-.35 2.43-.4C9.25 2.17 9.63 2.16 12 2.16zm0 1.8c-3.14 0-3.5.01-4.73.07-.96.04-1.48.2-1.83.34-.46.18-.78.4-1.13.74-.34.34-.56.67-.74 1.13-.14.35-.3.87-.34 1.83-.06 1.23-.07 1.6-.07 4.73s.01 3.5.07 4.73c.04.96.2 1.48.34 1.83.18.46.4.78.74 1.13.34.34.67.56 1.13.74.35.14.87.3 1.83.34 1.23.06 1.6.07 4.73.07s3.5-.01 4.73-.07c.96-.04 1.48-.2 1.83-.34.46-.18.78-.4 1.13-.74.34-.34.56-.67.74-1.13.14-.35.3-.87.34-1.83.06-1.23.07-1.6.07-4.73s-.01-3.5-.07-4.73c-.04-.96-.2-1.48-.34-1.83a2.9 2.9 0 0 0-.74-1.13 2.9 2.9 0 0 0-1.13-.74c-.35-.14-.87-.3-1.83-.34-1.23-.06-1.6-.07-4.73-.07zm0 4.6a5.44 5.44 0 1 1 0 10.88 5.44 5.44 0 0 1 0-10.88zm0 1.8a3.64 3.64 0 1 0 0 7.28 3.64 3.64 0 0 0 0-7.28zm5.66-1.99a1.27 1.27 0 1 1-2.54 0 1.27 1.27 0 0 1 2.54 0z"/></svg>
-          <span class="body"><b>Instagram</b><span>@jvpopov</span></span>
-        </a>
-        <a class="social-card" href="https://www.facebook.com/jvpopov/" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.9h2.65l.4-3.08h-3.05V8.05c0-.89.25-1.5 1.52-1.5h1.63V3.8A21.8 21.8 0 0 0 14.3 3.7c-2.36 0-3.98 1.44-3.98 4.08v2.24H7.66v3.08h2.66V21h3.18z"/></svg>
-          <span class="body"><b>Facebook</b><span>jvpopov</span></span>
-        </a>
-      </div>
-
-      <div class="contact-box">
-        <p>Prefer email? Tap a button below — the address is assembled on the fly so
-        automated scrapers scraping the raw page can't harvest it.</p>
+      <h3 class="section-subhead" data-i18n="contacts_professional_label"></h3>
+      <div class="contact-box contact-box--tight">
         <div class="email-buttons">
-          <button class="email-btn" type="button" data-user="j" data-domain="jev.lv" data-label="Personal — jev.lv">Email (jev.lv)</button>
-          <button class="email-btn secondary" type="button" data-user="jevgenijs.popovs" data-domain="gmail.com" data-label="Personal — Gmail">Email (Gmail)</button>
+          <button class="email-btn" type="button" data-user="jevgenijs.popovs" data-domain="gmail.com" data-label="Professional email">Email</button>
+          <a class="email-btn secondary" href="https://www.linkedin.com/in/jvpopov/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="email-btn secondary" href="https://www.xing.com/profile/Jevgenijs_Popovs" target="_blank" rel="noopener">Xing</a>
         </div>
-        <p class="note">Addresses reveal only after a click — no scripts, no scrapers.</p>
       </div>
+
+      <h3 class="section-subhead" data-i18n="contacts_sports_label"></h3>
+      <div class="contact-box contact-box--tight">
+        <div class="email-buttons">
+          <button class="email-btn" type="button" data-user="jev" data-domain="squashacc.com" data-label="Sports email">Email</button>
+          <a class="email-btn secondary" href="https://www.squashacc.com" target="_blank" rel="noopener">squashacc.com</a>
+        </div>
+      </div>
+
+      <h3 class="section-subhead" data-i18n="contacts_social_label"></h3>
+      <div class="contact-box contact-box--tight">
+        <div class="email-buttons">
+          <a class="email-btn secondary" href="https://www.facebook.com/jvpopov/" target="_blank" rel="noopener">Facebook</a>
+          <a class="email-btn secondary" href="https://www.instagram.com/jvpopov" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <p class="note" data-i18n="email_note"></p>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <span>&copy; <span id="year"></span> Jevgenijs "Jev" Popovs &middot; Maintal, Germany</span>
-  <a class="to-top" href="#top">Back to top ↑</a>
+  <span><span id="year"></span> &middot; <span data-i18n="footer_copy"></span></span>
+  <a class="to-top" href="#/" data-i18n="to_top"></a>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
