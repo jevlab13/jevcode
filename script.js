@@ -1,10 +1,9 @@
 // ============================================================
-// script.js — routing, i18n, hero animation, email reveal
+// script.js — language switching, email reveal (one-page site)
 // ============================================================
 
 const LANGS = ["en", "ru", "lv", "de"];
 const DEFAULT_LANG = "en";
-const VIEWS = ["home", "professional", "private", "sports", "contacts"];
 
 // ---- footer year ----
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -50,70 +49,12 @@ document.querySelectorAll('.lang-btn').forEach((btn) => {
 
 setLang(detectInitialLang());
 
-// ---------------- routing ----------------
-
-function currentRoute() {
-  const hash = window.location.hash.replace(/^#\/?/, '');
-  return VIEWS.includes(hash) ? hash : 'home';
-}
-
-function showView(name) {
-  VIEWS.forEach((v) => {
-    const el = document.getElementById('view-' + v);
-    if (!el) return;
-    if (v === name) {
-      el.hidden = false;
-      // restart the CSS entrance animation
-      el.style.animation = 'none';
-      // eslint-disable-next-line no-unused-expressions
-      el.offsetHeight;
-      el.style.animation = '';
-    } else {
-      el.hidden = true;
-    }
-  });
-
-  window.scrollTo({ top: 0, behavior: 'instant' in document.documentElement.style ? 'instant' : 'auto' });
-
-  const titles = {
-    home: 'Jev Popovs',
-    professional: 'Professional — Jev Popovs',
-    private: 'Private — Jev Popovs',
-    sports: 'Sports — Jev Popovs',
-    contacts: 'Contacts — Jev Popovs'
-  };
-  document.title = titles[name] || 'Jev Popovs';
-
-  if (name === 'home') runHeroTrace();
-}
-
-window.addEventListener('hashchange', () => showView(currentRoute()));
-showView(currentRoute());
-
-// ---------------- hero trace-line animation ----------------
-
-function runHeroTrace() {
-  const trace = document.getElementById('traceline');
-  if (!trace) return;
-  const path = trace.querySelector('path');
-  if (!path) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const len = path.getTotalLength();
-  path.style.transition = 'none';
-  path.style.strokeDasharray = len;
-  path.style.strokeDashoffset = len;
-  path.getBoundingClientRect(); // force reflow
-  path.style.transition = 'stroke-dashoffset 1.6s cubic-bezier(.65,0,.35,1) .3s';
-  requestAnimationFrame(() => { path.style.strokeDashoffset = '0'; });
-}
-
 // ---------------- email obfuscation ----------------
 // Built at click time only — never present as plain text/markup in the HTML,
 // so static scrapers reading the raw page source can't harvest it.
 
 document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.email-btn[data-user]');
+  const btn = e.target.closest('.link-item[data-user]');
   if (!btn || btn.dataset.state === 'revealed') return;
 
   const user = btn.dataset.user;
@@ -122,13 +63,14 @@ document.addEventListener('click', (e) => {
   const label = btn.dataset.label || 'Email';
 
   btn.dataset.state = 'revealed';
-  btn.textContent = address;
+  btn.querySelector('.link-item__label').textContent = address;
   btn.setAttribute('aria-label', label + ': ' + address);
 
   const link = document.createElement('a');
   link.href = 'mailto:' + address;
   link.className = btn.className;
-  link.textContent = address;
+  link.dataset.state = 'revealed';
   link.setAttribute('aria-label', label + ': ' + address);
+  link.innerHTML = btn.innerHTML;
   btn.replaceWith(link);
 });
