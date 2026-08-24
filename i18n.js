@@ -7,7 +7,7 @@ en: {
   meta_based: "Based: Germany, since 2012",
   meta_origin: "Origin: Latvia",
   meta_it: "IT since: 1997",
-  meta_coach: "Coaching since: 2005",
+  meta_coach: "Coaching since: 2025",
   group_professional: "Professional",
   group_private: "Private",
   group_sports: "Sports",
