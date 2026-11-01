@@ -16,7 +16,9 @@ en: {
   tag_myclub: "My club",
   email_note: "The address reveals only after a click \u2014 no scrapers.",
   footer_copy: "Jevgenijs \u201CJev\u201D Popovs \u00B7 Frankfurt area, Germany",
-  to_top: "Back to top \u2191"
+  to_top: "Back to top \u2191",
+  qr_link: "QR code",
+  qr_close: "Close"
 },
 
 ru: {
@@ -35,7 +37,9 @@ ru: {
   tag_myclub: "\u041C\u043E\u0439 \u043A\u043B\u0443\u0431",
   email_note: "\u0410\u0434\u0440\u0435\u0441 \u043F\u043E\u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u0441\u043B\u0435 \u043D\u0430\u0436\u0430\u0442\u0438\u044F \u2014 \u0437\u0430\u0449\u0438\u0442\u0430 \u043E\u0442 \u0441\u0431\u043E\u0440\u0449\u0438\u043A\u043E\u0432 \u043F\u043E\u0447\u0442\u044B.",
   footer_copy: "Jevgenijs \u00ABJev\u00BB Popovs \u00B7 \u043E\u043A\u0440\u0443\u0433\u0430 \u0424\u0440\u0430\u043D\u043A\u0444\u0443\u0440\u0442\u0430, \u0413\u0435\u0440\u043C\u0430\u043D\u0438\u044F",
-  to_top: "\u041D\u0430\u0432\u0435\u0440\u0445 \u2191"
+  to_top: "\u041D\u0430\u0432\u0435\u0440\u0445 \u2191",
+  qr_link: "QR-\u043A\u043E\u0434",
+  qr_close: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
 },
 
 lv: {
@@ -54,7 +58,9 @@ lv: {
   tag_myclub: "Mans klubs",
   email_note: "Adrese par\u0101d\u0101s tikai p\u0113c klik\u0161\u0137a \u2014 aizsardz\u012Bba pret e-pastu v\u0101c\u0113jiem.",
   footer_copy: "Jevgenijs \u201EJev\u201C Popovs \u00B7 Frankfurtes apk\u0101rtne, V\u0101cija",
-  to_top: "Uz augšu \u2191"
+  to_top: "Uz augšu \u2191",
+  qr_link: "QR kods",
+  qr_close: "Aizvērt"
 },
 
 de: {
@@ -73,7 +79,9 @@ de: {
   tag_myclub: "Mein Verein",
   email_note: "Die Adresse wird erst nach einem Klick angezeigt \u2014 Schutz vor automatisierten Sammlern.",
   footer_copy: "Jevgenijs \u201EJev\u201C Popovs \u00B7 Raum Frankfurt, Deutschland",
-  to_top: "Nach oben \u2191"
+  to_top: "Nach oben \u2191",
+  qr_link: "QR-Code",
+  qr_close: "Schließen"
 }
 
 };
